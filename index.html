@@ -3,15 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Фігури та Анімація</title>
-     <link rel="stylesheet" href="style.css">
-   
+    <title>Адаптивні SVG Фігури</title>
+    <style>
+      
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f0f2f5;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box; 
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        p {
+            text-align: center;
+        }
+
+        svg {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            
+            /* 1. Робимо SVG гнучким */
+            width: 100%;
+            height: auto; 
+       
+            max-width: 600px; 
+        }
+
+
+        .shape {
+            stroke-width: 5px;
+            transition: fill 0.4s ease-in-out, stroke 0.4s ease-in-out;
+        }
+
+        #square {
+            fill: #e74c3c;
+            stroke: #c0392b;
+        }
+
+        #rectangle {
+            fill: #3498db;
+            stroke: #2980b9;
+        }
+        
+        #circle {
+            fill: #2ecc71;
+            stroke: #27ae60;
+            cursor: pointer;
+        }
+        
+  
+        #circle:hover {
+            fill: #9b59b6;
+            stroke: #8e44ad;
+        }
+
+        #ellipse {
+            fill: #f1c40f;
+            stroke: #f39c12;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Фігури SVG</h1>
+    <h1>Адаптивні фігури SVG</h1>
 
-    <svg width="600" height="300" viewBox="0 0 600 300">
+    <svg viewBox="0 0 600 300">
         
         <rect id="square" class="shape" x="100" y="50" width="100" height="100" />
 
@@ -22,7 +90,7 @@
         <ellipse id="ellipse" class="shape" cx="425" cy="200" rx="120" ry="40" />
     </svg>
 
-    <p>Наведіть курсор на зелене коло, щоб побачити анімацію!</p>
-    
-    </body>
+    <p>Наведіть курсор на зелене коло, щоб побачити анімацію. <br>Спробуйте змінити розмір вікна браузера!</p>
+
+</body>
 </html>
